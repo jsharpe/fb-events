@@ -9,8 +9,8 @@
 			
 			<?php foreach ($members as $member): ?>
 				<div class="fb_pic">
-					<fb:profile-pic size="square" uid="<?= $member['id']; ?>" facebook-logo="false" linked="true"></fb:profile-pic><br />
-					<fb:name uid="<?= $member['id']; ?>" firstnameonly="true" capitalize="true" />
+		   <fb:profile-pic size="square" uid="<?php echo $member['id']; ?>" facebook-logo="false" linked="true"></fb:profile-pic><br />
+					<fb:name uid="<?php echo $member['id']; ?>" firstnameonly="true" capitalize="true" />
 				</div>
 			<?php endforeach; ?>
 			
@@ -19,7 +19,7 @@
 	<?php endif; ?>
 	
 	<?php if ($fbc_status == FBC_EVENTS_FULL_CONNECT): ?>
-		<h2 class="status"><?php print ($event_status ? t('Your status: @status', array('@status' => $event_status)) : t('Are you going?'));?></h2>
+	    <h2 class="status"><?php print ($event_status ? t('Your status: @status', array('@status' => $event_status)) : t('Are you going?'));?></h2>
 		<?php if ($perm_status): ?>
 			<?php print $event_form; ?>
 		<?php else: ?>
